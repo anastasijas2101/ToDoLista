@@ -1,0 +1,14 @@
+.buttonTextStyle {
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #385170;
+    background-color: whitesmoke;
+    max-width: 120px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5%;
+    margin: auto;
+    cursor: pointer;
+}
