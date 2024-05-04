@@ -16,7 +16,7 @@ const App = () => {
           <Route path='/' element={<Pocetna />} />
           <Route path='/kreirajTask' element={<KreirajTask />} />
           <Route path='/listaTaskova' element={<ListaTaskova />} />
-          <Route path='/' element={<ONama />} />
+          <Route path='/oNama' element={<ONama />} />
         </Routes>
       </BrowserRouter>
     </>
