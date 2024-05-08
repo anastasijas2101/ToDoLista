@@ -22,3 +22,21 @@
     margin-right: auto;
     gap: 20px;
 }
+
+.spanStyle {
+    position: relative;
+}
+
+.spanStyle span {
+    background-color: red;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    right: -8px;
+}

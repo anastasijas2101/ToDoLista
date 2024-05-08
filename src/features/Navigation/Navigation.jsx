@@ -10,7 +10,10 @@ const Navigation = () => {
                 <div className='navBarLinks'>
                     <Link to={{ pathname: '/' }}>Početna</Link>
                     <Link to={{ pathname: '/kreirajTask' }}>Kreiraj task</Link>
-                    <Link to={{ pathname: '/listaTaskova' }}>Lista taskova</Link>
+                    <div className='spanStyle'>
+                        <span>3</span>
+                        <Link to={{ pathname: '/listaTaskova' }}>Lista taskova</Link>
+                    </div>
                     <Link to={{ pathname: '/oNama' }}>O nama</Link>
                 </div>
             </div>
