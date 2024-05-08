@@ -1,0 +1,56 @@
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.labelStyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.labelStyle span {
+    border-radius: 50%;
+    background-color: greenyellow;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.titleBoxStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titleBoxStyle h1,
+h2 {
+    margin: 0px;
+    width: 400px;
+}
+
+.taskStyle {
+    background-color: whitesmoke;
+    color: #385170;
+    font-weight: bold;
+    font-size: large;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.taskStyle img {
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+}
