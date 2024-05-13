@@ -1,0 +1,17 @@
+.dialogForm {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogInput {
+    width: 500px;
+    background-color: whitesmoke;
+    color: #385170;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px;
+}
