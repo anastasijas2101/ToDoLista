@@ -6,15 +6,14 @@ import Button from '../../components/Button/Button'
 
 const ListaTaskova = () => {
 
-    const { tasks, deleteTask } = useTaskStore();
+    const { tasks, deleteTask, markDone } = useTaskStore();
     const router = useNavigate();
-
-    const handleClick = (taskId) => {
-    }
 
     const handleNavigate = () => {
         router('/kreirajTask');
     }
+
+    const doneTask = tasks.filter((task) => task.isCompleted).length;
 
     return (
         <div className='taskList'>
@@ -25,12 +24,12 @@ const ListaTaskova = () => {
                             <h1>Gotovi taskovi!</h1>
                             <h2>Nastavi tako!</h2>
                         </div>
-                        <span>0/{tasks.length}</span>
+                        <span>{doneTask}/{tasks.length}</span>
                     </div>
                     <div className='taskListBox'>
                         {tasks.map((task) => (
                             <div className='taskStyle'>
-                                <span className={task.isCompleted ? 'onClickSpan' : 'spanTaskBox'} onClick={() => handleClick(task.id)} />
+                                <span className={task.isCompleted ? 'onClickSpan' : 'spanTaskBox'} onClick={() => markDone(task.id)} />
                                 <p key={task.id}>{task.title}</p>
                                 <span>
                                     <img src="https://static.thenounproject.com/png/2545517-200.png" />

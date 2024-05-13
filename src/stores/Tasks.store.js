@@ -19,5 +19,6 @@ export const useTaskStore = create((set) => ({
         }
     ],
     addNewTask: (taskToAdd) => set((state) => ({ tasks: [...state.tasks, taskToAdd] })),
-    deleteTask: (id) => set((state) => ({ tasks: state.tasks.filter((item) => item.id !== id) }))
+    deleteTask: (id) => set((state) => ({ tasks: state.tasks.filter((item) => item.id !== id) })),
+    markDone: (id) => set((state) => ({ tasks: state.tasks.map((task) => task.id === id ? { ...task, isCompleted: !task.isCompleted } : task) })),
 }))
