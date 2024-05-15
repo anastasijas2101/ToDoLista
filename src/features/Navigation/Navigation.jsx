@@ -12,12 +12,12 @@ const Navigation = () => {
                 <SpeakerIcon />
                 <div className='navBarLinks'>
                     <Link to={{ pathname: '/' }}>Početna</Link>
-                    <Link to={{ pathname: '/kreirajTask' }}>Kreiraj task</Link>
+                    <Link to={{ pathname: '/createTask' }}>Kreiraj task</Link>
                     <div className='spanStyle'>
                         <span>{tasks.length}</span>
-                        <Link to={{ pathname: '/listaTaskova' }}>Lista taskova</Link>
+                        <Link to={{ pathname: '/tasksList' }}>Lista taskova</Link>
                     </div>
-                    <Link to={{ pathname: '/oNama' }}>O nama</Link>
+                    <Link to={{ pathname: '/aboutMe' }}>O nama</Link>
                 </div>
             </div>
         </nav>

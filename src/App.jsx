@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Navigation from './features/Navigation/Navigation';
-import Pocetna from './features/Pocetna/Pocetna';
-import KreirajTask from './features/KreirajTask/KreirajTask';
-import ListaTaskova from './features/ListaTaskova/ListaTaskova';
-import ONama from './features/ONama/ONama';
+import Home from './features/Home/Home';
+import TasksList from './features/TasksList/TasksList';
+import AboutMe from './features/AboutMe/AboutMe';
 import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
+import CreateTask from './features/CreateTask/CreateTask';
 
 const App = () => {
 
@@ -14,10 +14,10 @@ const App = () => {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path='/' element={<Pocetna />} />
-          <Route path='/kreirajTask' element={<KreirajTask />} />
-          <Route path='/listaTaskova' element={<ListaTaskova />} />
-          <Route path='/oNama' element={<ONama />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/createTask' element={<CreateTask />} />
+          <Route path='/tasksList' element={<TasksList />} />
+          <Route path='/aboutMe' element={<AboutMe />} />
         </Routes>
       </BrowserRouter>
     </>
