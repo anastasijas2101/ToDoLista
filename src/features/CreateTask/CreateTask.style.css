@@ -24,3 +24,7 @@
     padding: 5px;
     padding-left: 20px;
 }
+
+.createTaskDiv input::placeholder {
+    color: #385170;
+}

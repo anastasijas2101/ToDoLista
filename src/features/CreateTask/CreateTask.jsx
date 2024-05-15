@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react'
 import Button from '../../components/Button/Button'
 import { useTaskStore } from '../../stores/Tasks.store'
-import './KreirajTask.style.css'
+import './CreateTask.style.css'
 import { Toast } from 'primereact/toast';
 
-const KreirajTask = () => {
+const CreateTask = () => {
     const [text, setText] = useState();
     const { tasks, addNewTask } = useTaskStore();
     const toast = useRef(null);
@@ -42,4 +42,4 @@ const KreirajTask = () => {
     )
 }
 
-export default KreirajTask
+export default CreateTask

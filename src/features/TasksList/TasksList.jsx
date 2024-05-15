@@ -1,16 +1,16 @@
 import { useTaskStore } from '../../stores/Tasks.store'
-import './ListaTaskova.style.css'
+import './TasksList.style.css'
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import DialogBox from '../../components/DialogBox/DialogBox';
 
-const ListaTaskova = () => {
+const TasksList = () => {
 
     const { tasks, deleteTask, markDone, setDialog, dialog } = useTaskStore();
     const router = useNavigate();
 
     const handleNavigate = () => {
-        router('/kreirajTask');
+        router('/createTask');
     }
 
     const doneTask = tasks.filter((task) => task.isCompleted).length;
@@ -50,4 +50,4 @@ const ListaTaskova = () => {
     )
 }
 
-export default ListaTaskova
+export default TasksList

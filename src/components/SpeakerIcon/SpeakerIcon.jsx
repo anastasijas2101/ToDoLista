@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import './SpeakerIcon.style.css'
+import speaker from '../../assets/SpeakerIcon.png'
 
 const SpeakerIcon = () => {
     const router = useNavigate();
@@ -10,7 +11,7 @@ const SpeakerIcon = () => {
 
     return (
         <div className='speaker_icon' onClick={() => handleClickIcon()}>
-            <img src='https://static.vecteezy.com/system/resources/previews/008/822/259/original/3d-megaphone-object-with-transparent-background-png.png' alt="speakerIcon" />
+            <img src={speaker} alt="speakerIcon" />
         </div>
     )
 }
