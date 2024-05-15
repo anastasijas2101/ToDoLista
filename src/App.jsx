@@ -5,6 +5,7 @@ import Pocetna from './features/Pocetna/Pocetna';
 import KreirajTask from './features/KreirajTask/KreirajTask';
 import ListaTaskova from './features/ListaTaskova/ListaTaskova';
 import ONama from './features/ONama/ONama';
+import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
 
 const App = () => {
 
