@@ -7,7 +7,9 @@ const AboutMe = () => {
             <img src={myPic} alt='MyPic' />
             <h1>Simeunović Anastasija</h1>
             <p>Korištene tehnologije: React JS, JavaScript, Zustand, Material UI, PrimeReact</p>
-            <p>ToDoList je vrsta CRUD aplikacije, u sklopu koje </p>
+            <p>ToDoList je vrsta CRUD aplikacije, u sklopu koje je moguće dodavati, brisati i uređivati taskove. Ova aplikacija
+                koristi
+            </p>
         </div>
     )
 }
