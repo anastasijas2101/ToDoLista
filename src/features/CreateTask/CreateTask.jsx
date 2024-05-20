@@ -2,12 +2,12 @@ import { useRef, useState } from 'react'
 import Button from '../../components/Button/Button'
 import { useTaskStore } from '../../stores/Tasks.store'
 import './CreateTask.style.css'
-import { Toast } from 'primereact/toast';
+import { useNotificationStore } from '../../stores/Notification.store'
 
 const CreateTask = () => {
     const [text, setText] = useState();
     const { tasks, addNewTask } = useTaskStore();
-    const toast = useRef(null);
+    const setNotification = useNotificationStore(state => state.setNotification);
 
     const handleInput = (event) => {
         setText(event.target.value);
@@ -22,12 +22,8 @@ const CreateTask = () => {
             }
             addNewTask(taskToAdd);
             setText('');
-            showSuccess();
+            setNotification(true, 'Task uspješno kreiran', 'success')
         }
-    }
-
-    const showSuccess = () => {
-        toast.current.show({ life: 3000, severity: 'success', detail: 'Uspješno kreiran task!', closable: false })
     }
 
     return (
@@ -37,7 +33,6 @@ const CreateTask = () => {
                 <input placeholder="Upiši..." value={text} onChange={handleInput} type='text' />
                 <Button buttonText="Sačuvaj" handleClick={handleAddTask} />
             </div>
-            <Toast ref={toast} position='bottom-left' className='toastStyleBox' />
         </>
     )
 }
